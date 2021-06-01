@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -36,6 +37,9 @@ public class datshAdmin extends AppCompatActivity {
         showData();
 
 
+
+
+
     }
 
 
@@ -60,24 +64,17 @@ public class datshAdmin extends AppCompatActivity {
                 Toast.makeText(datshAdmin.this, "NO", Toast.LENGTH_SHORT).show();
             }
         }
-//        if (result == true) {
-//            Toast.makeText(datshAdmin.this, "OK", Toast.LENGTH_SHORT).show();
-//            name.setText("");
-//            email.setText("");
-//            phone.setText("");
-//            showData();
-//        } else {
-//            Toast.makeText(datshAdmin.this, "NO", Toast.LENGTH_SHORT).show();
-
-
-
 
     }
     public void showData(){
         ArrayList<String> listData = db.getAllUsers();
+
+
         ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, listData);
 
+
         lst.setAdapter(arrayAdapter);
+
     }
 
     public void edit(View view) {
@@ -104,19 +101,6 @@ public class datshAdmin extends AppCompatActivity {
             }
         }
 
-//        Boolean result = db.updateData(id, Name, Email, Phone);
-//        if (result == true) {
-//            Toast.makeText(datshAdmin.this, "OK", Toast.LENGTH_SHORT).show();
-//            name.setText("");
-//            email.setText("");
-//            phone.setText("");
-//            ID.setText("");
-//            showData();
-//        } else {
-//            Toast.makeText(datshAdmin.this, "NO", Toast.LENGTH_SHORT).show();
-//
-//
-//        }
     }
 
     public void delete(View view) {
@@ -136,15 +120,6 @@ public class datshAdmin extends AppCompatActivity {
                 Toast.makeText(datshAdmin.this, "NO", Toast.LENGTH_SHORT).show();
             }
         }
-//        if (result > 0){
-//            Toast.makeText(datshAdmin.this, "DELETE", Toast.LENGTH_SHORT).show();
-//            name.setText("");
-//            email.setText("");
-//            phone.setText("");
-//            ID.setText("");
-//            showData();
-//        }else{
-//            Toast.makeText(datshAdmin.this, "NO", Toast.LENGTH_SHORT).show();
-//        }
+
     }
 }

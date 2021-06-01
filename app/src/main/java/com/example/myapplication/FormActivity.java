@@ -27,7 +27,7 @@ public class FormActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (name.getText().toString().trim().equals("") || email.getText().toString().trim().equals("") || phone.getText().toString().trim().equals("")){
-                    Toast.makeText(getApplicationContext(), "il manque des informations", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "full your informations", Toast.LENGTH_LONG).show();
                 }else{
                     startActivity(new Intent(FormActivity.this, ResultActivity.class));
                 }

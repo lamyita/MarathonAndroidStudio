@@ -9,10 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".LogInActivity">
+        <activity android:name=".LogInActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
         </activity>
-        <activity android:name=".datshAdmin">
+        <activity android:name=".datshAdmin"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+
+
 
         </activity>
         <activity android:name=".ResultActivity" />
@@ -20,12 +24,13 @@
         <activity
             android:name=".MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
         </activity>
     </application>
 
